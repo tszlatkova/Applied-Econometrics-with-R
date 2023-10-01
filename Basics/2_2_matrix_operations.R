@@ -1,6 +1,6 @@
 ## 2 x 3 matrix, containing the elements 1:6, by column
 
-A <- matrix(1:6, nrow = 2) # you can use ncol = 3 fot the same result
+A <- matrix(1:6, nrow = 2) # you can use ncol = 3 for the same result
 A
 
                           #### Basic matrix algebra ####
