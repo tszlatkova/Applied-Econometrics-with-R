@@ -1,13 +1,13 @@
-## Standard aritmetic operators: +, -, *, /, ^
-## Mathematical functions: log(), exp(), sin(), asin(), cos(), acos(), tan(),
-##                         atan(), sign(), sqrt(), abs(), min() and max().
+# Standard aritmetic operators: +, -, *, /, ^
+# Mathematical functions: log(), exp(), sin(), asin(), cos(), acos(), tan(),
+#                         atan(), sign(), sqrt(), abs(), min() and max().
 
 log(exp(sin(pi/4)^2)*exp(cos(pi/4)^2))
 
                         #### Vector arithmetics ####
 
-## c() -> to generate a vector, where c stands for "combine" or "concatenate"
-## elements of a vector must be of the same type
+# c() -> to generate a vector, where c stands for "combine" or "concatenate"
+# elements of a vector must be of the same type
 
 x <- c(1.8, 3.14, 4, 88.169, 13) # names are case-sensitive
 
