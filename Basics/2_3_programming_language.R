@@ -1,4 +1,4 @@
-#### Lists ####
+                              #### Lists ####
 
 # generic vectors where each element can be virtually any type of object
 
@@ -16,7 +16,7 @@ mylist$sample
 
 mylist[[3]]$sd # the third element is also a list
 
-#### Logical comparisons ####
+                      #### Logical comparisons ####
 
 # <, <=, >, >=, ==, != 
 # If expr1 and expr2 are logical expressions, then expr1 & expr2 (logical 'and'),
@@ -39,7 +39,7 @@ any(x > 3)
 
 7 + TRUE
 
-#### Coercion ####
+                            #### Coercion ####
 
 is.numeric(x) # check the type of x
 is.character(x)
@@ -50,7 +50,7 @@ as.character(x) # convert an object from one type/class to a different one
 
 c(1, 'a') # a vector can only contain elements of the same mode
 
-#### Random number generation ####
+                    #### Random number generation ####
 
 set.seed(123) # simulations can be made exactly reproducible
 rnorm(2)
@@ -66,7 +66,7 @@ sample(c('male', 'female'), size = 5, replace = TRUE, prob = c(0.2, 0.8))
 # The above command draws a sample of size 5, with replacement. from the 
 # values 'male' and 'female', which are drawn with probabilities 0.2 and 0.8.
 
-#### Flow control ####
+                          #### Flow control ####
 
 # If/else statement
 
@@ -93,3 +93,23 @@ while(sum(x) < 100){
   x <- 2 * x
 }
 x
+
+                      #### Writing functions ####
+
+# A function, which takes a matrix X and uses a double for loop to compute
+# first the sum and then the mean in each column. The result is stored in a 
+# vector rval, which is returned after both loops are completed.
+
+cmeans <- function(X){
+  rval <- rep(0, ncol(X))
+  for(j in 1:ncol(X)) {
+    mysum <- 0
+    for(i in 1:nrow(X)) mysum <- mysum + X[i,j]
+    rval[j] <- mysum/nrow(X)
+  }
+  return(rval)
+}
+
+X <- matrix(1:20, ncol = 2)
+cmeans(X) 
+colMeans(X) # same as above
